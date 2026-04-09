@@ -24,7 +24,7 @@
     <div class="preloader" id="preloader">
   		<div class="loader" id="loader"></div>
 	</div>
-    
+
     <header>
         <figure>
             <img src="img/Vocantis Logo.svg" alt="Logo">
@@ -53,21 +53,23 @@
 
             <section class="card-filtros">
                 <div class="filtro-linha">
-                    <div class="filtro-item" style="flex-grow: 2;"> <label>Buscar curso</label>
+                    <div class="filtro-item" style="flex-grow: 2;"> <label for="inCurso">Buscar curso</label>
                         <div class="input-com-icon">
                             <img src="img/search.svg" alt="Buscar">
-                            <input type="text" placeholder="Digite o nome do curso...">
+                            <input id="inCurso" type="text" placeholder="Digite o nome do curso...">
                         </div>
                     </div>
                     <div class="filtro-item" style="flex-grow: 1;">
                         <label>Instituição de Ensino</label>
                         <div class="input-com-icon">
                             <img src="img/university.svg" alt="Tipo">
-                            <select>
-                                <option>Todos os tipos</option>
-                                <option>Fatec</option>
-                                <option>Etec</option>
-                            </select>
+                            <form action="">
+                                <select id="options">
+                                    <option value="allTypes" selected>Todos os tipos</option>
+                                    <option value="FATEC">FATEC</option>
+                                    <option value="ETEC">ETEC</option>
+                                </select>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -87,21 +89,7 @@
                     </div>
                 </div>
                 <div class="filtro-linha">
-                    <div class="filtro-item-botoes">
-                        <button class="btn-filtro">
-                            <img src="img/sun.svg" alt="Manhã"> Manhã
-                        </button>
-                        <button class="btn-filtro">
-                            <img src="img/cloud-sun.svg" alt="Tarde"> Tarde
-                        </button>
-                        <button class="btn-filtro">
-                            <img src="img/moon.svg" alt="Noite"> Noite
-                        </button>
-                        <button class="btn-filtro">
-                            <img src="img/clock.svg" alt="Integral"> Integral
-                        </button>
-                    </div>
-                    <button class="btn-limpar-filtro">
+                    <button id="clearFilter" class="btn-limpar-filtro">
                         <img src="img/funnel-x.svg" alt="Limpar">
                     </button>
                 </div>
@@ -109,13 +97,13 @@
 
             <section class="cursos-filtrados">
                 <div class="filtrados-header">
-                    <h2>Cursos: 18</h2>
+                    <h2 id="qtd-cursos">Cursos: 18</h2>
                 </div>
                 
                 <div class="cursos-grid-pagina">
+                    <!--
                     
-                    <!--Análise e Desenvolvimento de Sistemas-->
-                    <div class="card-curso-item">
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/laptop.svg" alt="Laptop">
@@ -124,7 +112,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <h3 id="title">Análise e Desenvolvimento de Sistemas</h3>
                         <p>Especializa profissionais para atuar na área de TI, desenvolvendo, analisando, e gerenciando sistemas.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -135,10 +123,6 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/cloud-sun.svg">
-                                Manhã, Tarde
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Informação</span>
@@ -146,8 +130,8 @@
                         </div>
                     </div>
 
-                    <!--Gestão Empresarial-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/briefcase.svg" alt="Gestão">
@@ -156,7 +140,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Gestão Empresarial</h3>
+                        <h3 id="title">Gestão Empresarial</h3>
                         <p>Especializa gestores com visão estratégica para planejar atividades e otimizar processos em organizações.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -167,10 +151,6 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Gestão</span>
@@ -178,8 +158,8 @@
                         </div>
                     </div>
 
-                    <!--Automação Industrial-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/settings.svg" alt="Automação">
@@ -188,7 +168,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Automação Industrial</h3>
+                        <h3 id="title">Automação Industrial</h3>
                         <p>Especializa profissionais para projetar, implementar e manter automações nos mais variados sistemas industriais.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -199,10 +179,6 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Controle</span>
@@ -210,8 +186,8 @@
                         </div>
                     </div>
 
-                    <!--Radiologia-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/heart.svg" alt="Automação">
@@ -220,7 +196,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Radiologia</h3>
+                        <h3 id="title">Radiologia</h3>
                         <p>Forma profissionais para realizar exames de radiologia, tomografia computadorizada, ressonância magnética e outros.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -231,10 +207,6 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Ambiente</span>
@@ -242,8 +214,8 @@
                         </div>
                     </div>
 
-                    <!--Redes de Computadores-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/laptop.svg" alt="Laptop">
@@ -252,7 +224,7 @@
                                 <span class="tag-curso tag-etec">ETEC</span>
                             </div>
                         </div>
-                        <h3>Redes de Computadores</h3>
+                        <h3 id="title">Redes de Computadores</h3>
                         <p>Forma profissionais a instalar e configurar computadores e equipamentos de informática em rede.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -263,10 +235,6 @@
                                 <img src="img/clock.svg">
                                 3 semestres
                             </li>
-                            <li>
-                                <img src="img/cloud-sun.svg">
-                                Manhã, Tarde, Integral
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Informação</span>
@@ -274,8 +242,8 @@
                         </div>
                     </div>
 
-                    <!--Gestão Comercial-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/briefcase.svg" alt="Gestão">
@@ -284,7 +252,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Gestão Comercial</h3>
+                        <h3 id="title">Gestão Comercial</h3>
                         <p>Especializa gestores para gerir transações comerciais em grandes empresas, mas principalmente pequenas e médias.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -295,10 +263,6 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Gestão</span>
@@ -306,8 +270,8 @@
                         </div>
                     </div>
 
-                    <!-- Mecatrônica -->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/settings.svg" alt="Automação">
@@ -316,7 +280,7 @@
                                 <span class="tag-curso tag-etec">ETEC</span>
                             </div>
                         </div>
-                        <h3>Mecatrônica Industrial</h3>
+                        <h3 id="title">Mecatrônica Industrial</h3>
                         <p>Especializa profissionais para projetar, implementar e manter automações nos mais variados sistemas industriais.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -327,10 +291,6 @@
                                 <img src="img/clock.svg">
                                 4 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Controle</span>
@@ -338,8 +298,8 @@
                         </div>
                     </div>
 
-                    <!--Enfermagem-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/heart.svg" alt="Automação">
@@ -348,7 +308,7 @@
                                 <span class="tag-curso tag-etec">ETEC</span>
                             </div>
                         </div>
-                        <h3>Enfermagem</h3>
+                        <h3 id="title">Enfermagem</h3>
                         <p>Forma profissionais que auxilia nos cuidados básicos de pacientes, aplicação de vacina, dar banhos, auxiliar em exames, entre outros.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -359,10 +319,6 @@
                                 <img src="img/clock.svg">
                                 4 semestres
                             </li>
-                            <li>
-                                <img src="img/moon.svg">
-                                Noite
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Ambiente</span>
@@ -370,8 +326,8 @@
                         </div>
                     </div>
 
-                    <!--Desenvolvimento de Software Multiplataforma-->
-                    <div class="card-curso-item">
+                    
+                    <div id="cardItem" class="card-curso-item">
                         <div class="card-curso-header">
                             <div class="card-icon-curso">
                                 <img src="img/laptop.svg" alt="Laptop">
@@ -380,7 +336,7 @@
                                 <span class="tag-curso tag-fatec">FATEC</span>
                             </div>
                         </div>
-                        <h3>Desenvolvimento de Software Multiplataforma</h3>
+                        <h3 id="title">Desenvolvimento de Software Multiplataforma</h3>
                         <p>Especializa profissionais para atuar na área de TI, desenvolvendo, analisando, e gerenciando sistemas.</p>
                         <ul class="curso-detalhes-lista">
                             <li>
@@ -391,17 +347,13 @@
                                 <img src="img/clock.svg">
                                 6 semestres
                             </li>
-                            <li>
-                                <img src="img/cloud-sun.svg">
-                                Manhã, Tarde
-                            </li>
                         </ul>
                         <div class="curso-tags-bottom">
                             <span class="tag-categoria">Informação</span>
                             <span class="tag-categoria">Comunicação</span>
                         </div>
                     </div>
-
+                    -->
                 </div>
             </section>
 
@@ -510,8 +462,8 @@
         </section>
     </footer>
 
-    <script src="assets/js/script_preloader.js"></script>
-    <script src="assets/js/script_preloader.js"></script>
+    <script src="./assets/js/script_preloader.js"></script>
+    <script src="./assets/js/cursos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
