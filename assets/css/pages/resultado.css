@@ -178,7 +178,7 @@
 .lista-customizada li {
     position: relative;
     padding-left: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     line-height: 1.5;
 }
 
@@ -239,8 +239,9 @@
 
 .curso-item {
     background-color: var(--color-Azulfundo1);
+    height: 108px;
     border-radius: 16px;
-    padding: 24px;
+    padding: 18px;
     border: 1px solid #1f293700;
     transition: all 0.3s ease;
 }
@@ -253,7 +254,7 @@
 
 .curso-item h5 {
     font-family: 'Montserrat B';
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-Branco);
     margin-bottom: 8px;
     position: relative;
